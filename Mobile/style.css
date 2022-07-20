@@ -1,0 +1,261 @@
+
+:root{
+    /* colors */
+--backgroundColor: rgb(242, 235, 227);
+--greenColor: rgb(60, 128, 103);
+--greycolor: gray;
+--defaultColor: black;
+--white: White;
+
+/* fonts */
+--smallFont: 15px;
+--midFont: 20px;
+--bigFont: 30px;
+--fontFamily1: 'Montserrat', sans-serif;
+--fontFamily2: 'Fraunces', serif;
+
+
+/* others */
+--borderRadius: 8px;
+--borderRadius2: 20px;
+--borderRadius3: 10px;
+--marginLeft: 30px;
+--mobileMarginLeft: 32px;
+--max-size: 340px;
+/*--marginRight: 25px; */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Montserrat:wght@500&display=swap');
+
+body {
+    background-color: var(--backgroundColor);
+    margin: 0;
+    cursor: crosshair;
+}
+
+.box {
+    /* display: block; */
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    /* margin: 160px 420px; */
+    margin: 275px 400px;
+    width: 600px;
+    max-width: 600px;
+    height: 450px;
+    max-height: 450px;
+    display: flex;
+    overflow: hidden;
+    border-radius: var(--borderRadius2);
+    box-sizing: border-box;
+}
+
+.left-section {
+    /* width: 300px;
+    max-width: 300px;
+    height: 380px;
+    max-height: 380px; */
+    width: 50%;
+    max-width: 50%;
+    height: 100%;
+    max-height: 100%;
+    display: block;  
+}
+
+.left-section img {
+    width: 100%;
+    height: 100%;
+    display: block;
+     
+}
+
+.right-section {
+    max-width: 300px;
+    height: 100%;
+    max-height: 100%;
+    background-color: var(--white);
+    flex-wrap: wrap;
+    font-family: var(--fontFamily1);
+    
+}
+
+h1, p, button {
+    max-width: 240px;
+}
+h1 {
+    margin-left: var(--marginLeft);
+    margin-top: 10px;
+    font-family: var(--fontFamily2);
+}
+
+.para1, .para2 {
+    font-size: var(--smallFont);
+    font-weight: lighter;
+    color: var(--greycolor);
+    margin-left: var(--marginLeft);
+    /* max-width: var(--max-width); */
+}
+.para1 {
+    margin-top: 25px;
+    letter-spacing: 3px;
+}
+
+.para2 {
+    margin-right: 25px;
+    line-height: 1.7em;
+    letter-spacing: 1px;
+}
+
+.para3 {
+    font-size: var(--bigFont);
+    color: var(--greenColor);
+    margin-left: var(--marginLeft);
+    word-spacing: 16px;
+    font-family: var(--fontFamily2);
+    margin-top: 20px;
+}
+
+/* .para3:hover {
+    cursor: text;
+} */
+
+del {
+    font-size: var(--smallFont);
+    font-weight: lighter;
+    color: var(--greycolor);
+    vertical-align: middle;
+}
+
+button {
+    margin-left: var(--marginLeft);
+    background-color: var(--greenColor);
+    color: var(--white);
+    width: 230px;
+    /* max-width: var(--max-width); */
+    margin-top: 25px;
+    padding: 15px;
+    border: transparent;
+    border-radius: var(--borderRadius);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+embed {
+    padding-right: 10px;
+}
+
+.para1:hover{
+    cursor: text;
+}
+
+.para2:hover{
+    cursor: text;
+}
+
+h1:hover{
+    cursor: text;
+}
+
+button:hover {
+    cursor: crosshair;
+} 
+
+embed {
+    padding-right: 10px;
+}
+
+embed:hover{
+    cursor: text;
+}
+small:hover {
+    cursor: text;
+}
+
+.attribution {
+    text-align: center;
+    background-color: var(--white);
+    height: 50px;
+    padding: auto;
+    line-height: 3.5em;
+}
+
+
+/* For Mobile Device  */
+@media screen and (max-width: 375px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 50px 20px;
+        width: var(--max-size);
+        max-width: var(--max-size);
+        height: 650px;
+        max-height: 650px;
+        box-sizing: border-box;
+        overflow: hidden;
+    border-radius: var(--borderRadius3);
+        
+    }
+
+    .left-section {
+        width: var(--max-size);
+        max-width: var(--max-size);
+        height: 250px;
+        max-height: 250px;
+        display: block;  
+    }
+    .right-section {
+        width: var(--max-size);
+        max-width: var(--max-size);
+        height: 400px;
+        max-height: 400px;
+        display: block;  
+    }
+    h1, p, button {
+        margin-left: var(--mobileMarginLeft);
+    }
+      p {
+        width: 280px;
+        max-width: 280px;
+    }
+
+    h1 {
+        width: 300px;
+        max-width: 300px;
+    }
+
+    .para2 {
+        margin-right: 25px;
+        line-height: 1.7em;
+        letter-spacing: 0;
+        width: 300px;
+        max-width: 300px;
+    }
+    .para3 {
+        margin-top: 25px;
+        font-size: 35px;
+        margin-bottom: 12px;
+        word-spacing: 15px;
+    }
+    button {
+        width: 280px;
+        max-width: 280px;
+        padding: 18px;
+        margin-top: 5px;
+        border-radius: var(--borderRadius);
+    }
+    del {
+        font-size: 15px;
+    }
+    .attribution {
+        width: 375px;
+        max-width: 375px;
+        font-size: 12px;
+        height: 40px;
+    }
+    
+}
